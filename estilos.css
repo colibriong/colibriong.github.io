@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+.contenedor {
+	
+	display: grid; 
+	grid-template-columns: 3% 1fr 1fr 1fr 1fr 3%;
+	grid-template-rows:12% auto auto 25% auto auto 10% 100px;
+	grid-row-gap: 1%;
+	grid-template-areas: 
+	 "... banner banner banner banner ..."
+	 "... men men men men ..."
+	 "... carrusel carrusel carrusel carrusel ..."
+	 "... texto texto texti texti ..."
+	 "... fan fanc fancg fancgb ..."
+	 "... video video video video ..."
+	 "... mapa mapa mapa mapa ..."
+	 "... pie pie pie pie ...";
+}
+.elem1{
+	grid-area: banner;
+	background-image: url("imagenes/BANNER.png");
+	background-position: center center;
+	background-size: cover;
+}
+.elem2{
+	grid-area: men;
+}
+.elem11{
+	grid-area: texto;
+	padding: 6%;
+}
+.elem4{
+	grid-area: fan;
+	padding: 6%;
+}
+.elem5{
+	grid-area: fanc;
+	padding: 6%;
+}
+.elem6{
+	grid-area: fancg;
+	padding: 6%;
+}
+.elem7{
+	grid-area: fancgb;
+	padding: 6%;
+}
+.elem8{
+	grid-area: video;
+	padding: 6%;
+}
+.elem9{
+	grid-area: texti;
+}
+.elem10{
+	grid-area: mapa;
+}
+.elem3{
+	grid-area: carrusel;
+}
+.elem12{
+	grid-area: pie;
+	display: flex;
+	justify-content: space-between;
+}
+
+.elem9 iframe {
+	width: 100%;
+	height: 100%;
+}
+.elem10 iframe {
+	width: 100%;
+	height: 100%;
+}
+.elem4 img, .elem5 img, .elem6 img, .elem7 img, .elem1 img {
+	width: 100%;
+	height: 100%;		
+}
+.por{
+	flex-grow: 10;
+	padding: 2%;
+}
+.qr{
+	flex-grow: 1;
+}
+.redes{
+	flex-grow: 1;
+	padding: 1%;
+}
+.redes img:hover {
+	filter: blur(2px);
+}
+h1 {
+	color:#634E9B;
+}
+
+@media(max-width: 786px){
+.contenedor {
+	
+	display: grid; 
+	
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows: 5% auto auto auto auto auto auto auto auto auto;
+	grid-row-gap: 1%;
+	grid-template-areas: 
+	 "banner banner"
+	 "men men"
+	 "carrusel carrusel"
+	 "fan fanc"
+	 "texto texto"
+	 "fancg fancgb"
+	 "texti texti"
+	 "video video"
+	 "mapa mapa"
+	 "pie pie";
+	}	
+.qr{display: none;
+	}
+.elem3{
+	grid-area: carrusel;
+	padding: 2%;
+}
+.elem9 {
+	padding: 2%;
+}
+.elem10 {
+	padding: 2%;
+}
+}
